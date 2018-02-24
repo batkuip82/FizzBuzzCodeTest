@@ -22,7 +22,7 @@ namespace CodeTest.Controllers
                 return new ObjectResult(_fizzBuzzService.GetResult(number));
             }
 
-            return new StatusCodeResult(400);
+            return new BadRequestObjectResult("Input is not a number");
         }
     }
 }
